@@ -17,4 +17,4 @@ The Pageviews API provides access to dektop, mobile-web, and mobile-app traffic 
 `dino_monthly_cumulative_start201501_end202210.json` : JSON file with timeseries views all-access (mobile + desktop) data for each dinosaur article from January 1 2015 to September 30, 2022.  
 
 ## Considerations 
-The code requests a big chuck of data when utilizing the API call. For more efficiency, use the API call once for each type of access, save the JSON locally, and work from that specific JSON file.
+The code requests a big chuck of data when utilizing the API call. For more efficiency, use the API call once for each type of access, save the JSON locally, and work from that specific JSON file. If using articles with special characters, such as quotes, properly parse these characters beforehand so the API call can easily create the approriate link.
