@@ -1,4 +1,4 @@
-# Plots & Analysis 
+# Plots 
 
 ## Maximum Average and Minimum Average
 ![plot](max_and_min_avg.png)
