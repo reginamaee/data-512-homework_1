@@ -36,6 +36,7 @@ See https://www.mediawiki.org/wiki/REST_API for more background and information.
 ```
 where the keys are the article titles with their time series data as its values. More information on the objects _(project, .. views)_ can be found on the Endpoint documentation listed above. 
 
+
 ## Considerations 
 The code requests a big chuck of data when utilizing the API call. For more efficiency, use the API call once for each type of access, save the JSON locally, and work from that specific JSON file. If using articles with special characters, such as quotes, properly parse these characters beforehand so the API call can easily create the approriate link.
 * Other issues with the data can be found on the [Pageviews Documentation](https://wikitech.wikimedia.org/wiki/Analytics/AQS/Pageviews) and are [documented](https://wikitech.wikimedia.org/wiki/Analytics/Data_Lake/Traffic/Pageview_hourly#Changes_and_known_problems_since_2015-06-16) in their hive data store where data is extracted.
