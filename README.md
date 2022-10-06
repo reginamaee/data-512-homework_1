@@ -19,9 +19,22 @@ See https://www.mediawiki.org/wiki/REST_API for more background and information.
 `dinosaur_genera.cleaned.SEPT.2022.csv` : Dinosaur related articles  
 
 ### Outputs
-`dino_monthly_mobile_start201501_end202210.json` : JSON file with timeseries views mobile-access data for each dinosaur article from January 1 2015 to September 30, 2022.  
-`dino_monthly_desktop_start201501_end202210.json` : JSON file with timeseries views desktop-access data for each dinosaur article from January 1 2015 to September 30, 2022.  
-`dino_monthly_cumulative_start201501_end202210.json` : JSON file with timeseries views all-access (mobile + desktop) data for each dinosaur article from January 1 2015 to September 30, 2022.  
+`dino_monthly_mobile_start201501_end202210.json`: JSON file with timeseries views mobile-access data for each dinosaur article from January 1 2015 to September 30, 2022.  
+`dino_monthly_desktop_start201501_end202210.json`: JSON file with timeseries views desktop-access data for each dinosaur article from January 1 2015 to September 30, 2022.  
+`dino_monthly_cumulative_start201501_end202210.json`: JSON file with timeseries views all-access (mobile + desktop) data for each dinosaur article from January 1 2015 to September 30, 2022.  
+* Each `JSON` file is formatted with the following schema:  
+```
+{
+[article_title] { "project:"
+                  "article:"
+                  "granularity:"
+                  "timestamp:"
+                  "agent:"
+                  "views:"}, 
+                  ...
+}
+```
+where the keys are the article titles with their time series data as its values.
 
 ## Considerations 
 The code requests a big chuck of data when utilizing the API call. For more efficiency, use the API call once for each type of access, save the JSON locally, and work from that specific JSON file. If using articles with special characters, such as quotes, properly parse these characters beforehand so the API call can easily create the approriate link.
