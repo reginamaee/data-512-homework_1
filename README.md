@@ -8,3 +8,4 @@ This assignment constructs, analysizes, and publishes a dataset of monthly artic
 
 ### Data used
 Dinosaur related articles
+JSON files pulled with API to get page view counts of dinosaur articles at the monthly level
